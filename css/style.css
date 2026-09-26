@@ -50,3 +50,6 @@
 
 /* Refine About typography */
 #over .about-grid>div:first-child>p{font-size:12px;line-height:1.35;letter-spacing:.02em}#over .about-copy h3{font-size:clamp(22px,2.4vw,30px);line-height:1.12}@media(max-width:560px){#over .about-grid>div:first-child>p{font-size:11px}#over .about-copy h3{font-size:22px;line-height:1.15}}
+
+/* More compact contact form */
+.contact-form{gap:12px}.contact-form label{margin-bottom:4px;font-size:12px}.contact-form input,.contact-form textarea{padding:10px 12px;font-size:14px}.contact-form textarea{min-height:110px;resize:vertical}.contact-form button,.contact-form .btn{padding:9px 16px;min-height:0;font-size:13px}.contact-form .form-status{margin-top:4px}.contact-form .privacy-note{margin-top:2px;font-size:11px;line-height:1.4}@media(max-width:560px){.contact-form{gap:9px}.contact-form input,.contact-form textarea{padding:8px 10px}.contact-form textarea{min-height:90px}.contact-form button,.contact-form .btn{padding:8px 14px}}
