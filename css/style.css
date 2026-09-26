@@ -92,3 +92,6 @@
 
 /* Enlarge Just 4 Fun logo */
 #werk .project-visual.j4fun.logo-visual img{max-width:82%!important;max-height:132px!important}@media(max-width:560px){#werk .project-visual.j4fun.logo-visual img{max-width:88%!important;max-height:108px!important}}
+
+/* Ultra-compact contact submit + footer close to contact */
+#contact.section{padding-bottom:10px!important}#contact-form .submit{width:auto!important;min-width:0!important;min-height:0!important;padding:5px 9px!important;font-size:10px!important;line-height:1.1!important;gap:5px!important;border-radius:4px!important}#contact-form .submit span{font-size:10px!important}.footer{margin-top:0!important;padding-top:6px!important;padding-bottom:7px!important;min-height:0!important}@media(max-width:560px){#contact.section{padding-bottom:8px!important}#contact-form .submit{padding:4px 8px!important;font-size:9px!important;line-height:1!important}.footer{padding-top:5px!important;padding-bottom:6px!important}}
