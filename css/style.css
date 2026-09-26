@@ -8,3 +8,6 @@
 /* Smaller hero CTA + keep header and CTA within the first mobile viewport */
 .hero .primary-btn{padding:8px 15px;min-height:0;width:auto;line-height:1.1;font-size:13px}
 @media(max-width:560px){.site-header{height:72px}.site-header nav{top:71px}.hero{padding-top:14px}.hero h1{font-size:clamp(42px,12vw,52px);margin-top:16px;margin-bottom:18px}.hero-row{gap:16px;margin-bottom:22px}.lead{font-size:17px;line-height:1.5}.hero .primary-btn{width:auto;padding:7px 13px;font-size:12px}.hero-meta{padding:12px 0 14px}}
+
+/* Visually center the B. brand mark */
+.brand-mark{display:flex;align-items:center;justify-content:center;line-height:1;padding:0 0 .08em .04em}
