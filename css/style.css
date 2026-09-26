@@ -47,3 +47,6 @@
 
 /* Preserve full portrait and anchor mobile CTA lower */
 #over .about-photo{height:auto;aspect-ratio:auto;background:transparent}#over .about-photo img{width:100%;height:auto;object-fit:contain;object-position:center;display:block}@media(max-width:900px){#over .about-photo{aspect-ratio:auto}}@media(max-width:560px){#over .about-photo{aspect-ratio:auto}.hero{height:calc(100svh - 76px);min-height:0}.hero-copy{height:100%}.hero-row{flex:1}.hero .primary-btn{margin-top:auto;align-self:flex-end;padding:12px 20px;font-size:15px;min-height:44px}}
+
+/* Refine About typography */
+#over .about-grid>div:first-child>p{font-size:12px;line-height:1.35;letter-spacing:.02em}#over .about-copy h3{font-size:clamp(22px,2.4vw,30px);line-height:1.12}@media(max-width:560px){#over .about-grid>div:first-child>p{font-size:11px}#over .about-copy h3{font-size:22px;line-height:1.15}}
