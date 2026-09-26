@@ -89,3 +89,6 @@
 
 /* Move mobile hero CTA one line upward */
 @media(max-width:560px){.hero .primary-btn{transform:translateY(-22px)!important}}
+
+/* Enlarge Just 4 Fun logo */
+#werk .project-visual.j4fun.logo-visual img{max-width:82%!important;max-height:132px!important}@media(max-width:560px){#werk .project-visual.j4fun.logo-visual img{max-width:88%!important;max-height:108px!important}}
