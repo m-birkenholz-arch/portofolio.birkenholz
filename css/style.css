@@ -101,3 +101,6 @@
 
 /* Contact submit: full width, same height as primary hero button */
 #contact-form .submit{align-self:stretch!important;width:100%!important;box-sizing:border-box!important;padding:14px 20px!important;font-size:13px!important;line-height:1.2!important;min-height:0!important;justify-content:center!important}@media(max-width:560px){#contact-form .submit{width:100%!important;padding:14px 20px!important;font-size:13px!important;line-height:1.2!important}}
+
+/* Mobile contact proportions: compact fields and CTA */
+@media(max-width:560px){#contact-form input:not([type="checkbox"]){height:48px!important;min-height:48px!important;padding:10px 14px!important}#contact-form textarea{min-height:110px!important;padding:12px 14px!important}#contact-form .submit{height:48px!important;min-height:48px!important;padding:0 16px!important;font-size:13px!important;line-height:1!important}}
