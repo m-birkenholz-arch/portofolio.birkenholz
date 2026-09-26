@@ -59,3 +59,9 @@
 
 /* Align footer brand to the far right */
 .footer{display:flex;justify-content:flex-end}.footer .brand{margin-left:auto}
+
+/* Align feature rows and reserve space for + / count */
+.feature-list li,.feature-more li{position:relative;padding-left:0;padding-right:34px;text-align:left}.feature-more summary{display:grid;grid-template-columns:minmax(0,1fr) 34px;align-items:center;column-gap:10px}.feature-more summary>span:first-child{min-width:0}.feature-more .feature-count{width:34px;text-align:right;justify-self:end;white-space:nowrap}.feature-more ul{margin-right:0;padding-right:0}
+/* Smaller footer brand, tight to divider */
+.footer{padding-top:8px!important;padding-bottom:10px}.footer .brand{gap:8px}.footer .brand-mark{width:34px;height:34px;font-size:24px;border-radius:7px}.footer .brand strong{font-size:15px;line-height:1}.footer .brand small{font-size:8px;line-height:1;margin-top:3px}
+@media(max-width:560px){.feature-list li,.feature-more li{padding-right:30px}.feature-more summary{grid-template-columns:minmax(0,1fr) 30px}.feature-more .feature-count{width:30px}.footer{padding-top:6px!important;padding-bottom:8px}.footer .brand-mark{width:30px;height:30px;font-size:21px}.footer .brand strong{font-size:14px}.footer .brand small{font-size:7px}}
