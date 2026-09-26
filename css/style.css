@@ -111,3 +111,6 @@
 /* Mobile menu: compact right-side panel, left-aligned text */
 @media(max-width:900px){.site-header nav{left:auto!important;right:0!important;width:clamp(180px,33.333vw,320px)!important;align-items:stretch!important;text-align:left!important;padding:22px 18px!important;border-left:1px solid var(--line)!important}.site-header nav a{width:100%!important;text-align:left!important;transform:translateX(18px)}}
 @media(max-width:560px){.site-header nav{width:42vw!important;min-width:170px!important;max-width:220px!important}}
+
+/* Numbered navigation */
+.site-header nav .nav-num{color:var(--blue);font-family:var(--mono);margin-right:7px}
