@@ -4,7 +4,8 @@ const emailOk=s=>/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(s);
 
 export const handler=async(event)=>{
   if(event.httpMethod!=="POST")return json(405,{error:"Method not allowed"});
-  if(!process.env.RESEND_API_KEY)return json(500,{error:"Mailservice niet ingesteld"});
+  const apiKey=process.env.RESEND_API_KEY;
+  if(!apiKey)return json(500,{error:"RESEND_API_KEY ontbreekt in Netlify"});
   let data;try{data=JSON.parse(event.body||"{}")}catch{return json(400,{error:"Ongeldig verzoek"})}
   const name=String(data.name||"").trim(),email=String(data.email||"").trim(),message=String(data.message||"").trim(),company=String(data.company||"").trim();
   if(company)return json(200,{ok:true});
@@ -12,8 +13,9 @@ export const handler=async(event)=>{
   const text=`Nieuw bericht via birkenholz.nl\n\nNaam: ${name}\nE-mail: ${email}\n\nBericht:\n${message}`;
   const html=`<h2>Nieuw bericht via birkenholz.nl</h2><p><strong>Naam:</strong> ${esc(name)}<br><strong>E-mail:</strong> ${esc(email)}</p><p><strong>Bericht:</strong></p><p style="white-space:pre-wrap">${esc(message)}</p>`;
   try{
-    const r=await fetch("https://api.resend.com/emails",{method:"POST",headers:{"Authorization":`Bearer ${process.env.RESEND_API_KEY}`,"Content-Type":"application/json"},body:JSON.stringify({from:"Webdesign Birkenholz <contact@birkenholz.nl>",to:["m-birkenholz@hotmail.com"],reply_to:email,subject:`Nieuw contactbericht van ${name}`,text,html})});
-    if(!r.ok){console.error("Resend error",r.status,await r.text());return json(502,{error:"E-mail kon niet worden verzonden"})}
+    const r=await fetch("https://api.resend.com/emails",{method:"POST",headers:{"Authorization":`Bearer ${apiKey}`,"Content-Type":"application/json"},body:JSON.stringify({from:"Webdesign Birkenholz <contact@birkenholz.nl>",to:["m-birkenholz@hotmail.com"],reply_to:email,subject:`Nieuw contactbericht van ${name}`,text,html})});
+    const responseText=await r.text();
+    if(!r.ok){console.error("Resend error",r.status,responseText);let detail="Resend kon de e-mail niet verzenden";try{const parsed=JSON.parse(responseText);detail=parsed.message||detail}catch{}return json(r.status>=400&&r.status<500?400:502,{error:detail})}
     return json(200,{ok:true});
-  }catch(err){console.error("Contact function error",err);return json(500,{error:"Serverfout"})}
+  }catch(err){console.error("Contact function error",err);return json(500,{error:"Serverfout bij verzenden"})}
 };
