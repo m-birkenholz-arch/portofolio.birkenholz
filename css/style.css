@@ -65,3 +65,6 @@
 /* Smaller footer brand, tight to divider */
 .footer{padding-top:8px!important;padding-bottom:10px}.footer .brand{gap:8px}.footer .brand-mark{width:34px;height:34px;font-size:24px;border-radius:7px}.footer .brand strong{font-size:15px;line-height:1}.footer .brand small{font-size:8px;line-height:1;margin-top:3px}
 @media(max-width:560px){.feature-list li,.feature-more li{padding-right:30px}.feature-more summary{grid-template-columns:minmax(0,1fr) 30px}.feature-more .feature-count{width:30px}.footer{padding-top:6px!important;padding-bottom:8px}.footer .brand-mark{width:30px;height:30px;font-size:21px}.footer .brand strong{font-size:14px}.footer .brand small{font-size:7px}}
+
+/* Feature list: fixed + column so wrapped lines align with text */
+.feature-list li,.feature-more li{position:relative;padding-left:46px!important;padding-right:0!important}.feature-list li:before,.feature-more li:before{position:absolute;left:0;top:6px;width:28px;margin:0!important;text-align:left}.feature-list li:last-child{border-bottom:0}@media(max-width:560px){.feature-list li,.feature-more li{padding-left:44px!important}.feature-list li:before,.feature-more li:before{left:0;width:26px;top:6px}}
