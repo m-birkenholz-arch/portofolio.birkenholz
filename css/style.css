@@ -71,3 +71,6 @@
 
 /* Visual cue for clickable screenshot gallery */
 .huhta-gallery-trigger{position:relative}.zoom-hint{position:absolute;right:16px;top:16px;width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:rgba(8,12,18,.72);border:1px solid rgba(255,255,255,.35);color:#fff;font:30px/1 Arial,sans-serif;transform:rotate(-20deg);z-index:2;pointer-events:none}@media(max-width:560px){.zoom-hint{right:12px;top:12px;width:34px;height:34px;font-size:27px}}
+
+/* Portfolio visuals: logos only */
+.project-visual.logo-visual{display:flex;align-items:center;justify-content:center;padding:34px;background:#0d1117}.project-visual.logo-visual img{display:block;width:auto;height:auto;max-width:72%;max-height:62%;object-fit:contain}.project-visual.huhta.logo-visual img{max-width:72%;max-height:48%}.project-visual.palsma.logo-visual img{max-width:58%;max-height:72%}.project-visual.j4fun.logo-visual img{max-width:78%;max-height:72%}.project-visual.atelier.logo-visual img{max-width:54%;max-height:72%}@media(max-width:560px){.project-visual.logo-visual{padding:24px}.project-visual.logo-visual img{max-width:78%;max-height:68%}.project-visual.palsma.logo-visual img{max-width:62%}.project-visual.atelier.logo-visual img{max-width:58%}}
