@@ -114,3 +114,6 @@
 
 /* Numbered navigation */
 .site-header nav .nav-num{color:var(--blue);font-family:var(--mono);margin-right:7px}
+
+/* Blue glow behind Michael portrait */
+#over .about-photo{position:relative;overflow:visible!important;isolation:isolate}#over .about-photo:before{content:"";position:absolute;z-index:-1;left:8%;right:8%;top:10%;bottom:4%;background:radial-gradient(ellipse at center,rgba(65,104,246,.58) 0%,rgba(65,104,246,.28) 38%,rgba(65,104,246,0) 72%);filter:blur(28px);transform:scale(1.12);pointer-events:none}#over .about-photo img{position:relative;z-index:1}
